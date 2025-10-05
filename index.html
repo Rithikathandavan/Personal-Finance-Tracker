@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Finance Tracker 🧸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="toggle-container">
+    <label>
+      <input type="checkbox" id="modeToggle" class="hidden-checkbox" />
+      <div class="toggle-switch" id="switchUI"></div>
+    </label>
+  </div>
+
+  <h1>✨ Student Finance Tracker ✨</h1>
+
+  <div class="form">
+    <input type="text" id="description" placeholder="Description" />
+    <input type="number" id="amount" placeholder="How much?" />
+    <select id="type">
+      <option value="income">Income 💰</option>
+      <option value="expense">Expense 😢</option>
+    </select>
+    <button onclick="addTransaction()">Add 💖</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Type</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="transactionTable"></tbody>
+  </table>
+
+  <div class="summary">
+    <div>💲 Total Income: ₹<span id="totalIncome">0</span></div>
+    <div>💸 Total Expense: ₹<span id="totalExpense">0</span></div>
+    <div>💳 Balance: ₹<span id="balance">0</span></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
